@@ -6,4 +6,4 @@ filtrar puede obtener los valores de una vista distinta.
 Se incorpora una vista generica que sirve para la mayoria de los filtrados 
 necesarios.
 
-Mas informacion en la pagina web del proyecto: http://(donde?)
+Mas informacion en la pagina web del proyecto: http://code.google.com/p/djadminext/

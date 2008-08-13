@@ -4,4 +4,4 @@ autogenerados por el sitio de administracion.
 
 Principales desarrolladores:
     Ariel Rossanigo <arielrossanigo@gmail.com>
-    Cesar Roldan <cesar@hugoroldan.com.ar>
+    Cesar Roldan <croldan@gmail.com>
