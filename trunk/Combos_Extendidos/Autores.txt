@@ -1,0 +1,7 @@
+Combos Extendidos fue desarrollado en 2008 para agregar la funcionalidad de 
+filtrado entre combos en los formularios de Django y sobre todo en los formularios 
+autogenerados por el sitio de administracion.
+
+Principales desarrolladores:
+    Ariel Rossanigo <arielrossanigo@gmail.com>
+    Cesar Roldan <cesar@hugoroldan.com.ar>
