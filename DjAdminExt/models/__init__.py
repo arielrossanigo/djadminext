@@ -1,1 +1,1 @@
-from DjAdminExt.models.fields.CUIPField import CUIPField
+from DjAdminExt.models.fields.CUIPField import *
