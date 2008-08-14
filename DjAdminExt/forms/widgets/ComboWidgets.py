@@ -20,10 +20,14 @@ class SelectAJAX(forms.Select):
         la funcion genera contenido extra mediante los bindings para utilizar
         el contenido JS
         '''
+        name_html=self.build_attrs(attrs, name=name).get('id', name)
+        prefix= 'id_'
+        if name_html.rfind('-') > 0:
+            prefix= name_html[:name_html.rfind('-') + 1]
         onchange= []
         for b in self.bindings:
-            onchange.append("populateSelect('%s', 'id_%s', 'id_%s', '%s', '%s', '%s_set', '%s');"%(
-                b.url, name, b.detail_field_name, b.app_name, b.master_model_name, b.detail_model_name.lower(), b.detail_display_field))
+            onchange.append("populateSelect('%s', '%s', '%s', '%s', '%s', '%s_set', '%s');"%(
+                b.url, name_html, prefix + b.detail_field_name, b.app_name, b.master_model_name, b.detail_model_name.lower(), b.detail_display_field))
         att={}
         if len(onchange)!=0:
             att['onChange']= ' '.join(onchange)

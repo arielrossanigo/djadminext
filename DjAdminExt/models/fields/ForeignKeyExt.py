@@ -10,7 +10,7 @@ class ForeignKeyExt(models.ForeignKey):
         Se necesita que se indique el parametro bindings con la lista de
         parametros requeridos para actualizar cada campo.
         '''
-        bindings = kwargs.pop('bindings', list)
+        bindings = kwargs.pop('bindings', list())
         app_name=''
         if isinstance(to, basestring):
             if to.index('.') > 0:
