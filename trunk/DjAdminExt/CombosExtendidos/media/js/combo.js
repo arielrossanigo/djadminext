@@ -10,6 +10,7 @@ function populateSelect(url, field_master, field_detail ,master_app_name, master
         $.each(data, function(k, v){
             dest.options[k]= new Option(data[k]["fields"][detail_field_name],data[k]["pk"]);
         });
+    dest.onchange();
     });
 
     }
