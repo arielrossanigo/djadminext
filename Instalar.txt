@@ -1,0 +1,25 @@
+Prerequisitos:
+  DjAdminExt se utilizan sobre Django, por lo que es necesario que este
+  se encuentre instalado en el sistema.
+  Tambien se necesita la libreria JQuery ( http://jquery.com/ )
+  Para utilizar los widgets se debe tener correctamente instalado y
+  configurado el servicio de archivos estaticos para utilizar desde ahi los
+  archivos JS (jquery.js y combo.js). Sino se deben incluir estos archivos en
+  la ruta correspondiente a MEDIA_ADMIN.
+
+Instalacion:
+
+1 - Agregar DjAdminExt a PYTHONPATH y la carpeta JS dentro
+    de la ruta de MEDIA_ROOT o los archivos que se encuentran dentro de la
+    carpeta JS en la carpeta JS dentro de MEDIA_ADMIN
+2 - Agregar en url.py la vista generica:
+    from DjAdminExt.views import master_detail
+    # URL para la vista generica
+    (r'^MasterDetailCombo/(\d+)/(\w+)/(\w+)/(\w+)/(\w+)/$', master_detail),
+3 - En los modelos donde se quiera usar los combos extendidos se debe importar
+    ForeignKeyExt. Utilizar el tipo de campo ForeignKeyExt reemplazando los ForeignKey
+4 - Incluir los JS en el template.
+    Se pueden modificar los templates del admin. Para que todos los templates
+    incorporen el JS modificando change_form.html.
+    Tambien se puede incorporar el JS directamente a traves del ModelAdmin (o de
+    la clase Admin en el modelo para la version estable)
