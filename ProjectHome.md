@@ -1,0 +1,1 @@
+Widgets, Scripts and Functions to extend the Django Administration Site functionalities
